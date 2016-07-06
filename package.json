@@ -1,0 +1,24 @@
+{
+  "name": "moviereview-reader",
+  "version": "1.0.0",
+  "description": "Pick ImageURLs from source，then compose to HTML with content",
+  "main": "DoubanMovieReviewReader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BOOLRon/MovieReviewReader.git"
+  },
+  "keywords": [
+    "douban",
+    "moviereview",
+    "imageurls"
+  ],
+  "author": "Ron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BOOLRon/MovieReviewReader/issues"
+  },
+  "homepage": "https://github.com/BOOLRon/MovieReviewReader#readme"
+}
