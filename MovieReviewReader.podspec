@@ -80,7 +80,10 @@ Pod::Spec.new do |s|
   #
 
   s.source       = { :git => "https://github.com/BOOLRon/MovieReviewReader.git"  }
-s.resource = '*.bundle'
+#s.resource = '*.bundle'
+ s.resource_bundles = {
+         'MovieReviewReader' => ['Pod/MovieReviewReader/*.bundle']
+                                       }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
