@@ -1,5 +1,8 @@
 
 function createImageContentFromHtmlSourceCode(source,content){
+    if(source===undefined){
+        return _createImageContent(content,undefined);
+    }
     var imagelinks = _pickImageUrlsFromSource(source);
     var imageContent = _createImageContent(content,imagelinks);
     return imageContent;
