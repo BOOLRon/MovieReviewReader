@@ -1,18 +1,8 @@
 
-function fetchImageContentFromHtmlLink(link,content,callback){
-
-  _fetchSourceBy(link,function(source,error){
-    if(error){
-     callback(null,error);
-    }else {
-      var imagelinks = _pickImageUrlsFromSource(source);
-      var imageContent = _createImageContent(content,imagelinks);
-      callback(imageContent,null);
-    }
-  });
-
-  return _createImageContent(content,undefined);
-
+function createImageContentFromHtmlSourceCode(source,content){
+    var imagelinks = _pickImageUrlsFromSource(source);
+    var imageContent = _createImageContent(content,imagelinks);
+    return imageContent;
 }
 
 function _createImageContent(content,links){
@@ -58,18 +48,5 @@ function _pickImageUrlsFromSource(source){
   return links;
 }
 
-function _fetchSourceBy(link,callback) {
-  if (link){
-    fetch(link).then(function(response){response.text();})
-      .then(function(responseText){
-        callback(responseText,null);
-      })
-      .catch(function(error){
-        callback(null,error);
-      });
-  }else {
-    callback(null,null);
-  }
-}
 
-module.exports = fetchImageContentFromHtmlLink;
+module.exports = createImageContentFromHtmlSourceCode;
