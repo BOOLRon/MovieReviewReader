@@ -51,8 +51,4 @@ function _pickImageUrlsFromSource(source){
   return links;
 }
 
-var DoubanMovieReviewReader = {
-    createImageContentFromHtmlSourceCode:createImageContentFromHtmlSourceCode,
-}
-
 module.exports = createImageContentFromHtmlSourceCode;
